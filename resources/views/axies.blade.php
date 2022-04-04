@@ -1,4 +1,4 @@
-@extends('auth.includes.dashboard')
+@extends('includes.dashboard')
 
 
 @section('content')
