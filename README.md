@@ -6,10 +6,10 @@ This project runs with Laravel version 8.
 
 Assuming you've already installed on your machine: PHP (>= 7.0.0), [Laravel](https://laravel.com) and [Composer](https://getcomposer.org).
 
-# install dependencies
+# Install dependencies
 composer install
 
-# make a databse
+# Make a databse
 
 run migrations
 
