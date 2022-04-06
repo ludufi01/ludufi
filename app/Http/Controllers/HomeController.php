@@ -79,7 +79,7 @@ class HomeController extends Controller
 		//$data=$this->getAxieDetails($roninAdd,$request->manager_percentage,$request->name);
 		$data=$this->getSLP($roninAdd,$request->manager_percentage,$request->name);
 		
-		$scholar_tracker_id = ScholarTracker::latest()->first()->id;
+		$scholar_tracker_id = ScholarTracker::select('id')->where('ronin_address',$request->ronin_address)->where('user_id',Auth::guard('user')->user()->id)->first();
 
 		ScholarDetail::create([
               'scholar_tracker_id' => $scholar_tracker_id,
