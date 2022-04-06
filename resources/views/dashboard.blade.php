@@ -498,20 +498,25 @@ var	total_rows=table.rows().count();
 if(scholar_name=='')
 {
 	$('#data-scholar_name').html('Field is required');
+	return false;
 }	else {
 	$('#data-scholar_name').html('');
 }if(ronin_address=='')
 {
 	$('#data-ronin_address').html('Field is required');
+	return false;
 }else {
 var ronin=ronin_address.split(':');
 if(ronin[0]!='ronin')
 {
 	$('#data-ronin_address').html('Ronin Address is invalid');
+	return false;
 }	else if(ronin[1].length<40)	{
 	$('#data-ronin_address').html('Ronin Address is short');
+	return false;
 }	else if(ronin[1].length>40)	{
 	$('#data-ronin_address').html('Ronin Address is long');
+	return false;
 }	else {
 	$('#data-ronin_address').html('');
 }
